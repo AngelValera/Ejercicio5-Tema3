@@ -1,0 +1,16 @@
+anguage: node_js
+
+node_js:
+  - "4.2.1"
+
+before_install:
+  - npm install -g mocha
+  - npm install .
+script: mocha
+
+notifications:   # Notificamos los resultados de los test por correo
+    recipients:
+        - angelvalera.epal@gmail.com
+    email:
+        on_success: change
+        on_failure: always
